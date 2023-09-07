@@ -14,7 +14,7 @@ type SystemDetails struct {
 	BootTime        uint64                  `json:"boot_time"`
 	IPAddresses     []string                `json:"ip_addresses"`
 	MACAddresses    []string                `json:"mac_addresses"`
-	NetInterfaces   net.InterfaceStatList `json:"net_interfaces"`
+	NetInterfaces   net.InterfaceStatList 	`json:"net_interfaces"`
 	SerialNumber    string                  `json:"serial_number"`
 }
 
