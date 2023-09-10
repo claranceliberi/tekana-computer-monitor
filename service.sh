@@ -29,7 +29,7 @@ esac
 # Function to start the service
 start_service() {
     nohup /usr/local/tmc/$BINARY &> /dev/null &
-    echo $! > service.pid
+    echo $! > /usr/local/tmc/service.pid
     echo "Service started with PID $(cat service.pid)"
 }
 
@@ -37,7 +37,7 @@ start_service() {
 stop_service() {
     if [ -f service.pid ]; then
         kill -9 $(cat service.pid)
-        rm service.pid
+        rm /usr/local/tmc/service.pid
         echo "Service stopped"
     else
         echo "Service is not running"
